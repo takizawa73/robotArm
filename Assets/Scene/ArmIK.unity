@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 370282699}
   - component: {fileID: 370282698}
   - component: {fileID: 370282697}
+  - component: {fileID: 370282700}
   m_Layer: 0
   m_Name: ArmL
   m_TagString: Untagged
@@ -504,6 +505,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370282694}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &370282700
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370282694}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &382621392
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +747,7 @@ GameObject:
   - component: {fileID: 539737005}
   - component: {fileID: 539737004}
   - component: {fileID: 539737003}
+  - component: {fileID: 539737002}
   m_Layer: 0
   m_Name: ArmR
   m_TagString: Untagged
@@ -752,6 +769,21 @@ Transform:
   m_Father: {fileID: 552375482}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &539737002
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539737000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &539737003
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -820,6 +852,8 @@ GameObject:
   - component: {fileID: 552375484}
   - component: {fileID: 552375483}
   - component: {fileID: 552375486}
+  - component: {fileID: 552375488}
+  - component: {fileID: 552375487}
   m_Layer: 0
   m_Name: AxisR
   m_TagString: Untagged
@@ -918,6 +952,55 @@ MonoBehaviour:
   R_Slider: {fileID: 1709655969}
   B_Slider: {fileID: 1954868772}
   T_Slider: {fileID: 425563207}
+--- !u!59 &552375487
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 552375481}
+  m_ConnectedBody: {fileID: 1171512016}
+  m_Anchor: {x: 0, y: 1, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 1.0000002, z: -2}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &552375488
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 552375481}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &589589600
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +1013,7 @@ GameObject:
   - component: {fileID: 589589605}
   - component: {fileID: 589589604}
   - component: {fileID: 589589603}
+  - component: {fileID: 589589602}
   m_Layer: 0
   m_Name: ArmT
   m_TagString: Untagged
@@ -951,6 +1035,21 @@ Transform:
   m_Father: {fileID: 1185126638}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &589589602
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 589589600}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &589589603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1154,6 +1253,7 @@ GameObject:
   - component: {fileID: 655262403}
   - component: {fileID: 655262402}
   - component: {fileID: 655262401}
+  - component: {fileID: 655262406}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1205,7 +1305,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -1232,6 +1332,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &655262406
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655262400}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &689541263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1360,8 @@ GameObject:
   - component: {fileID: 689541266}
   - component: {fileID: 689541265}
   - component: {fileID: 689541268}
+  - component: {fileID: 689541269}
+  - component: {fileID: 689541270}
   m_Layer: 0
   m_Name: AxisB
   m_TagString: Untagged
@@ -1343,6 +1460,55 @@ MonoBehaviour:
   R_Slider: {fileID: 1709655969}
   B_Slider: {fileID: 1954868772}
   T_Slider: {fileID: 425563207}
+--- !u!54 &689541269
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689541263}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &689541270
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 689541263}
+  m_ConnectedBody: {fileID: 552375488}
+  m_Anchor: {x: 0, y: 1, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0.99999934, z: -2}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &690799169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1742,7 @@ GameObject:
   - component: {fileID: 789840118}
   - component: {fileID: 789840117}
   - component: {fileID: 789840116}
+  - component: {fileID: 789840119}
   m_Layer: 0
   m_Name: ArmU
   m_TagString: Untagged
@@ -1652,6 +1819,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789840113}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &789840119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789840113}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &793147535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,6 +2647,7 @@ GameObject:
   - component: {fileID: 1112543128}
   - component: {fileID: 1112543127}
   - component: {fileID: 1112543126}
+  - component: {fileID: 1112543131}
   m_Layer: 0
   m_Name: ArmS
   m_TagString: Untagged
@@ -2562,6 +2745,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1112543124}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1112543131
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112543124}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1171512010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2773,8 @@ GameObject:
   - component: {fileID: 1171512013}
   - component: {fileID: 1171512012}
   - component: {fileID: 1171512015}
+  - component: {fileID: 1171512016}
+  - component: {fileID: 1171512017}
   m_Layer: 0
   m_Name: AxisU
   m_TagString: Untagged
@@ -2673,6 +2873,55 @@ MonoBehaviour:
   R_Slider: {fileID: 1709655969}
   B_Slider: {fileID: 1954868772}
   T_Slider: {fileID: 425563207}
+--- !u!54 &1171512016
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171512010}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1171512017
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171512010}
+  m_ConnectedBody: {fileID: 1796800764}
+  m_Anchor: {x: 0, y: 1, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 1.0000002, z: -2}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &1173825613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,6 +3001,8 @@ GameObject:
   - component: {fileID: 1185126639}
   - component: {fileID: 1185126642}
   - component: {fileID: 1185126643}
+  - component: {fileID: 1185126645}
+  - component: {fileID: 1185126644}
   m_Layer: 0
   m_Name: AxisT
   m_TagString: Untagged
@@ -2864,6 +3115,55 @@ MonoBehaviour:
   effector: {fileID: 1185126638}
   direction: {x: 0, y: 0, z: 0}
   axisNum: 0
+--- !u!59 &1185126644
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185126637}
+  m_ConnectedBody: {fileID: 689541269}
+  m_Anchor: {x: 0, y: 1, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0.99999934, z: -2.0000134}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &1185126645
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185126637}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1214159334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,6 +3364,8 @@ GameObject:
   - component: {fileID: 1296866631}
   - component: {fileID: 1296866630}
   - component: {fileID: 1296866633}
+  - component: {fileID: 1296866634}
+  - component: {fileID: 1296866635}
   m_Layer: 0
   m_Name: AxisS
   m_TagString: Untagged
@@ -3162,6 +3464,55 @@ MonoBehaviour:
   R_Slider: {fileID: 1709655969}
   B_Slider: {fileID: 1954868772}
   T_Slider: {fileID: 425563207}
+--- !u!54 &1296866634
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296866628}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1296866635
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296866628}
+  m_ConnectedBody: {fileID: 655262406}
+  m_Anchor: {x: 0, y: 1, z: 0}
+  m_Axis: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -0.50000036, y: 2, z: 0}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &1359809845
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,6 +3914,8 @@ GameObject:
   - component: {fileID: 1796800761}
   - component: {fileID: 1796800760}
   - component: {fileID: 1796800763}
+  - component: {fileID: 1796800764}
+  - component: {fileID: 1796800765}
   m_Layer: 0
   m_Name: AxisL
   m_TagString: Untagged
@@ -3661,6 +4014,55 @@ MonoBehaviour:
   R_Slider: {fileID: 1709655969}
   B_Slider: {fileID: 1954868772}
   T_Slider: {fileID: 425563207}
+--- !u!54 &1796800764
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1796800758}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!59 &1796800765
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1796800758}
+  m_ConnectedBody: {fileID: 1296866634}
+  m_Anchor: {x: 0, y: 1, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 1.0000002, z: -2}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &1900526744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +4228,7 @@ GameObject:
   - component: {fileID: 2052202483}
   - component: {fileID: 2052202482}
   - component: {fileID: 2052202481}
+  - component: {fileID: 2052202480}
   m_Layer: 0
   m_Name: ArmB
   m_TagString: Untagged
@@ -3847,6 +4250,21 @@ Transform:
   m_Father: {fileID: 689541264}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2052202480
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2052202478}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &2052202481
 MeshRenderer:
   m_ObjectHideFlags: 0
